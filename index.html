@@ -375,37 +375,61 @@
             </section>
 
             <section id="screens" class="ascii-frame">
-                <h2>┌─ SCREENSHOTS (ASCII) ─┐</h2>
+                <h2>┌─ SCREENSHOTS ─┐</h2>
+                <p style="text-align: center; margin-bottom: 16px;">
+                    <button class="btn" onclick="toggleScreenshots()" id="screenshot-toggle">ASCII MODE: <span id="ascii-status">OFF</span></button>
+                </p>
                 
-                <div class="screen-placeholder">
-                    <h3>[SCREEN 01 — FIND THE DIFFERENCE]</h3>
-                    <pre>
+                <!-- Real Screenshots -->
+                <div id="real-screenshots">
+                    <div style="margin: 20px 0; text-align: center;">
+                        <h3>SCREEN 01 — FIND THE DIFFERENCE (Photo Mode)</h3>
+                        <img src="/lovable-uploads/8a8047c6-093c-4c11-bca8-ba978784193c.png" alt="Smile Dog screenshot showing two photos of a real dog side by side in find-the-difference gameplay" style="max-width: 100%; height: auto; border: 1px solid var(--text-green); background: rgba(0, 230, 118, 0.02);">
+                    </div>
+
+                    <div style="margin: 20px 0; text-align: center;">
+                        <h3>SCREEN 02 — HAPPY BIRTHDAY DOG</h3>
+                        <img src="/lovable-uploads/fd17f8e4-91ba-42f0-b76a-729929173069.png" alt="Smile Dog screenshot showing two photos of a Bernese Mountain Dog with party hat in find-the-difference gameplay" style="max-width: 100%; height: auto; border: 1px solid var(--text-green); background: rgba(0, 230, 118, 0.02);">
+                    </div>
+
+                    <div style="margin: 20px 0; text-align: center;">
+                        <h3>SCREEN 03 — CARTOON DACHSHUND</h3>
+                        <img src="/lovable-uploads/f19ceb75-d8e4-4583-8e6b-77b3a5b506cf.png" alt="Smile Dog screenshot showing cartoon illustration of dachshund with food in find-the-difference gameplay" style="max-width: 100%; height: auto; border: 1px solid var(--text-green); background: rgba(0, 230, 118, 0.02);">
+                    </div>
+                </div>
+                
+                <!-- ASCII Screenshots (Easter Egg) -->
+                <div id="ascii-screenshots" style="display: none;">
+                    <div class="screen-placeholder">
+                        <h3>[SCREEN 01 — FIND THE DIFFERENCE]</h3>
+                        <pre>
    /\_/\     vs     /\_/\
   ( o.o )          ( O.O )    
    &gt; ^ &lt;            &gt; ∧ &lt;    
     woof.            w00f.
-                    </pre>
-                </div>
+                        </pre>
+                    </div>
 
-                <div class="screen-placeholder">
-                    <h3>[SCREEN 02 — INBOX: "MARY – Medium"]</h3>
-                    <pre>
+                    <div class="screen-placeholder">
+                        <h3>[SCREEN 02 — INBOX: "MARY – Medium"]</h3>
+                        <pre>
 ┌─ INBOX (3 new) ──────────────┐
 │ [!] mary_friend@mail.com     │
 │ [!] WARNING: DO NOT OPEN     │
 │ [•] spam_offers@deals.net    │
 │ [•] Re: cute dog pics :)     │
 └──────────────────────────────┘
-                    </pre>
-                </div>
+                        </pre>
+                    </div>
 
-                <div class="screen-placeholder">
-                    <h3>[SCREEN 03 — LOOK BEHIND YOU]</h3>
-                    <pre>
+                    <div class="screen-placeholder">
+                        <h3>[SCREEN 03 — LOOK BEHIND YOU]</h3>
+                        <pre>
    /\_/\
   ( • • )    you looked.
   (  ^  )–––==================&gt;
-                    </pre>
+                        </pre>
+                    </div>
                 </div>
             </section>
 
@@ -580,6 +604,25 @@
                 }
             });
         });
+
+        // Screenshots toggle function
+        function toggleScreenshots() {
+            const realScreenshots = document.getElementById('real-screenshots');
+            const asciiScreenshots = document.getElementById('ascii-screenshots');
+            const status = document.getElementById('ascii-status');
+            
+            if (realScreenshots.style.display === 'none') {
+                // Show real screenshots, hide ASCII
+                realScreenshots.style.display = 'block';
+                asciiScreenshots.style.display = 'none';
+                status.textContent = 'OFF';
+            } else {
+                // Show ASCII screenshots, hide real
+                realScreenshots.style.display = 'none';
+                asciiScreenshots.style.display = 'block';
+                status.textContent = 'ON';
+            }
+        }
 
         // Easter egg function
         function easterEgg() {
