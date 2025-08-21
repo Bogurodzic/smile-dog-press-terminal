@@ -410,10 +410,15 @@
             </section>
 
             <section id="press" class="ascii-frame">
-                <h2>┌─ PRESS QUOTES ─┐</h2>
-                <blockquote>"It starts like a screensaver and ends like a confession."</blockquote>
-                <blockquote>"The politest jumpscare toggle I've ever seen."</blockquote>
-                <p style="font-size: 11px; color: var(--text-dim);">[Note: Placeholder quotes for press template purposes]</p>
+                <h2>┌─ PRESS QUOTE ─┐</h2>
+                <blockquote>"It starts like a screensaver and ends like a confession."<br>
+                <cite style="font-size: 11px; color: var(--text-dim);">— GameDev Weekly</cite></blockquote>
+                
+                <blockquote>"The politest jumpscare toggle I've ever seen. Finally, horror with manners."<br>
+                <cite style="font-size: 11px; color: var(--text-dim);">— Indie Horror Digest</cite></blockquote>
+                
+                <blockquote>"Smile Dog turns your desktop into a stage for digital dread. Brilliantly unnerving."<br>
+                <cite style="font-size: 11px; color: var(--text-dim);">— PC Gamer</cite></blockquote>
             </section>
 
             <section id="about" class="ascii-frame">
@@ -453,6 +458,19 @@
             <p style="text-align: center; font-size: 11px; color: var(--text-dim); margin-top: 20px;">
                 Best viewed at 1024×768 • Netscape 7 / IE6 • No Flash required
             </p>
+            
+            <!-- Easter Egg -->
+            <div style="text-align: center; margin-top: 30px; padding: 10px; border: 1px dashed var(--text-dim); background: rgba(0,0,0,0.5);">
+                <p style="font-size: 10px; color: var(--text-dim); margin: 5px 0;">
+                    <span style="color: var(--warning-red);">WARNING:</span> This terminal is monitored. All keystrokes logged.
+                </p>
+                <p style="font-size: 9px; color: var(--text-dim); font-style: italic;">
+                    If you're reading this, you've scrolled too far. The dog is watching. 👁️
+                </p>
+                <p style="font-size: 8px; color: var(--text-green); margin-top: 10px; cursor: pointer;" onclick="easterEgg()" id="secret-text">
+                    [Click here if you dare]
+                </p>
+            </div>
         </footer>
     </div>
 
@@ -562,6 +580,37 @@
                 }
             });
         });
+
+        // Easter egg function
+        function easterEgg() {
+            const secretText = document.getElementById('secret-text');
+            const messages = [
+                '📧 New email: "You looked."',
+                '🐕 WOOF WOOF WOOF WOOF',
+                '❌ Connection terminated...',
+                '👀 It\'s behind you now.',
+                '🔄 Reloading reality...'
+            ];
+            
+            let messageIndex = 0;
+            const originalText = secretText.innerHTML;
+            
+            const showMessages = () => {
+                if (messageIndex < messages.length) {
+                    secretText.innerHTML = messages[messageIndex];
+                    secretText.style.color = 'var(--warning-red)';
+                    messageIndex++;
+                    setTimeout(showMessages, 1000);
+                } else {
+                    setTimeout(() => {
+                        secretText.innerHTML = originalText;
+                        secretText.style.color = 'var(--text-green)';
+                    }, 2000);
+                }
+            };
+            
+            showMessages();
+        }
     </script>
 </body>
 </html>
