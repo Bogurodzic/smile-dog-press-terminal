@@ -340,7 +340,6 @@
                 <p>A cute "spot-the-difference" doggy game lands on your desktop. The UI glitches. Emails pile up. The pictures stop being cute. Play in ~30 minutes; try not to hit "Reply All."</p>
                 <div>
                     <a href="https://store.steampowered.com/app/3895360/Smile_Dog/" class="btn btn-primary" target="_blank" rel="noopener">Buy on Steam</a>
-                    <button class="btn" onclick="downloadPress()">[Print Press Kit]</button>
                 </div>
             </section>
 
@@ -348,14 +347,14 @@
                 <h2>┌─ FACTSHEET ─┐</h2>
                 <div class="two-col">
                     <div>
-                        <p><strong>Genre:</strong> Psychological / Cozy Horror • Desktop Sim • Puzzle/Narrative</p>
+                        <p><strong>Genre:</strong> Cozy Horror • Desktop Sim • Puzzle/Narrative • Psychological</p>
                         <p><strong>Length:</strong> ~30 minutes (one sitting)</p>
                         <p><strong>Dev/Publisher:</strong> Sweet Sennin Games</p>
                         <p><strong>Platform:</strong> PC (Steam)</p>
                     </div>
                     <div>
                         <p><strong>Languages:</strong> EN, PL (UI/subs)</p>
-                        <p><strong>Release:</strong> Coming soon</p>
+                        <p><strong>Release:</strong> 21.08.2025 (released)</p>
                         <p><strong>Tags:</strong> cozy horror • emails • desktop vibes • creepypasta</p>
                     </div>
                 </div>
@@ -435,14 +434,14 @@
 
             <section id="press" class="ascii-frame">
                 <h2>┌─ PRESS QUOTE ─┐</h2>
-                <blockquote>"It starts like a screensaver and ends like a confession."<br>
-                <cite style="font-size: 11px; color: var(--text-dim);">— GameDev Weekly</cite></blockquote>
-                
-                <blockquote>"The politest jumpscare toggle I've ever seen. Finally, horror with manners."<br>
-                <cite style="font-size: 11px; color: var(--text-dim);">— Indie Horror Digest</cite></blockquote>
-                
-                <blockquote>"Smile Dog turns your desktop into a stage for digital dread. Brilliantly unnerving."<br>
-                <cite style="font-size: 11px; color: var(--text-dim);">— PC Gamer</cite></blockquote>
+                <div style="text-align: center; padding: 20px; border: 1px dashed var(--text-dim); background: rgba(0,0,0,0.3);">
+                    <p style="color: var(--text-dim); font-size: 14px; font-style: italic;">
+                        📰 Your quote can be here first!
+                    </p>
+                    <p style="color: var(--text-dim); font-size: 12px; margin-top: 10px;">
+                        Contact us at <span style="color: var(--link-blue);">contact@sweetsenningames.com</span> for press inquiries
+                    </p>
+                </div>
             </section>
 
             <section id="about" class="ascii-frame">
@@ -452,10 +451,9 @@
 
             <section id="contact" class="ascii-frame">
                 <h2>┌─ CONTACT ─┐</h2>
-                <p><strong>Press contact:</strong> press@sweetsenningames.com <button class="btn" onclick="copyEmail()" id="copy-btn">[Copy]</button></p>
+                <p><strong>Press contact:</strong> contact@sweetsenningames.com <button class="btn" onclick="copyEmail()" id="copy-btn">[Copy]</button></p>
                 <p><strong>Steam page:</strong> <a href="https://store.steampowered.com/app/3895360/Smile_Dog/" target="_blank" rel="noopener">https://store.steampowered.com/app/3895360/Smile_Dog/</a></p>
                 <p><strong>Twitter/X:</strong> <a href="https://twitter.com/SweetSenninGames" target="_blank" rel="noopener">@SweetSenninGames</a></p>
-                <p><strong>Print press kit:</strong> <button class="btn" onclick="downloadPress()">#</button> (dummy)</p>
                 <p style="font-size: 11px; margin-top: 20px;">© Sweet Sennin Games. "Smile Dog" is an homage to classic internet folklore.</p>
             </section>
         </main>
@@ -543,7 +541,7 @@
 
         // Copy email function
         function copyEmail() {
-            const email = 'press@sweetsenningames.com';
+            const email = 'contact@sweetsenningames.com';
             
             if (navigator.clipboard) {
                 navigator.clipboard.writeText(email).then(function() {
