@@ -60,6 +60,26 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
+## How to build the project?
+
+To build the project for production:
+
+```sh
+# Install dependencies (if not already done)
+npm i
+
+# Build the project
+npm run build
+```
+
+This will create a `dist` folder with the production-ready files.
+
+To preview the production build locally:
+
+```sh
+npm run preview
+```
+
 ## How can I deploy this project?
 
 Simply open [Lovable](https://lovable.dev/projects/5dbecde4-801d-4c19-bb22-1b2e86e3934a) and click on Share -> Publish.
