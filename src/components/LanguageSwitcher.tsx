@@ -4,9 +4,13 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { Globe } from 'lucide-react';
 
 const LanguageSwitcher = () => {
-  const { i18n } = useTranslation();
+  const { i18n, ready } = useTranslation();
+
+  // Add console logging for debugging
+  console.log('LanguageSwitcher rendering, i18n ready:', ready, 'current language:', i18n.language);
 
   const changeLanguage = (lng: string) => {
+    console.log('Changing language to:', lng);
     i18n.changeLanguage(lng);
     localStorage.setItem('i18nextLng', lng);
   };
@@ -21,6 +25,16 @@ const LanguageSwitcher = () => {
     return currentLang === 'pl' ? 'Polski' : 'English';
   };
 
+  // Show loading if i18n is not ready
+  if (!ready) {
+    return (
+      <Button variant="outline" size="sm" className="h-10 px-3 gap-2 bg-background border border-border">
+        <Globe className="h-4 w-4" />
+        <span>Loading...</span>
+      </Button>
+    );
+  }
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -30,7 +44,7 @@ const LanguageSwitcher = () => {
           <span className="hidden sm:inline text-sm">{getCurrentLanguage()}</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="min-w-[140px] bg-popover border border-border shadow-md">
+      <DropdownMenuContent align="end" className="min-w-[140px] bg-popover border border-border shadow-md z-[9999]">
         <DropdownMenuItem 
           onClick={() => changeLanguage('en')} 
           className="cursor-pointer hover:bg-accent focus:bg-accent"
