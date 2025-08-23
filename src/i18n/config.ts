@@ -17,11 +17,13 @@ i18n
       }
     },
     fallbackLng: 'en',
-    debug: false,
+    debug: true,
     detection: {
       order: ['localStorage', 'navigator', 'htmlTag'],
+      lookupLocalStorage: 'i18nextLng',
       caches: ['localStorage']
     },
+    supportedLngs: ['en', 'pl'],
     interpolation: {
       escapeValue: false
     }
