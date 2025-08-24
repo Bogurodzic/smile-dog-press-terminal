@@ -18,7 +18,7 @@ i18n
     },
     fallbackLng: 'en',
     debug: false,
-    lng: 'en', // Set default language explicitly
+    lng: 'pl', // Set default language explicitly
     detection: {
       order: ['localStorage', 'navigator'],
       lookupLocalStorage: 'i18nextLng',
