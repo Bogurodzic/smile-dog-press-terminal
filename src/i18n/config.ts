@@ -17,13 +17,13 @@ i18n
       }
     },
     fallbackLng: 'en',
-    debug: true,
+    debug: false,
+    lng: 'en', // Set default language explicitly
     detection: {
-      order: ['localStorage', 'navigator', 'htmlTag'],
+      order: ['localStorage', 'navigator'],
       lookupLocalStorage: 'i18nextLng',
       caches: ['localStorage']
     },
-    supportedLngs: ['en', 'pl'],
     interpolation: {
       escapeValue: false
     }
