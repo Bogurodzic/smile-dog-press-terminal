@@ -324,14 +324,18 @@
         </header>
 
         <nav class="nav-frame" role="navigation" aria-label="Main navigation">
-            <button class="btn" onclick="toggleLanguage()" id="lang-toggle" style="float: left; margin-right: 16px;">[PL/EN]</button>
-            <a href="#home" data-i18n="nav.home">[H]ome</a>
+            <div style="display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap;">
+                <button class="btn" onclick="toggleLanguage()" id="lang-toggle">[PL/EN]</button>
+                <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                    <a href="#home" data-i18n="nav.home">[H]ome</a>
             <a href="#factsheet" data-i18n="nav.factsheet">[F]actsheet</a>
             <a href="#features" data-i18n="nav.features">[F]eatures</a>
             <a href="#screens" data-i18n="nav.screens">[S]creens</a>
             <a href="#press" data-i18n="nav.press">[P]ress</a>
-            <a href="#contact" data-i18n="nav.contact">[C]ontact</a>
-            <a href="#download" data-i18n="nav.download">[D]ownload</a>
+                    <a href="#contact" data-i18n="nav.contact">[C]ontact</a>
+                    <a href="#download" data-i18n="nav.download">[D]ownload</a>
+                </div>
+            </div>
         </nav>
 
         <main id="main">
@@ -575,53 +579,53 @@
                 'footer.on': 'ON'
             },
             pl: {
-                typewriter: 'Twoja skrzynka cię obserwuje.',
+                typewriter: 'Twoja skrzynka odbiorowa cię obserwuje.',
                 'header.subtitle': 'TERMINAL PRASOWY BBS v1.0 • SMILE DOG • twoja skrzynka cię obserwuje',
                 'nav.home': '[G]łówna',
-                'nav.factsheet': '[I]nfo',
-                'nav.features': '[F]eatures',
-                'nav.screens': '[S]kriny',
+                'nav.factsheet': '[I]nformacje',
+                'nav.features': '[F]unkcje',
+                'nav.screens': '[Z]rzuty',
                 'nav.press': '[P]rasa',
                 'nav.contact': '[K]ontakt',
                 'nav.download': '[P]obierz',
                 'home.title': '┌─ SMILE DOG — Thriller Desktopowy ─┐',
-                'home.description': 'Urocza gra "znajdź różnice" z pieskami ląduje na twoim pulpicie. UI się psuje. Emaile się piętrzą. Obrazki przestają być urocze. Graj ~30 minut; staraj się nie kliknąć "Odpowiedz wszystkim".',
+                'home.description': 'Urocza gra "znajdź różnicę" z pieskami pojawia się na twoim pulpicie. Interfejs zaczyna szwankować. Maile się piętrzą. Obrazki przestają być urocze. Rozgrywka trwa ~30 minut; tylko nie klikaj "Odpowiedz wszystkim".',
                 'home.buy_steam': 'Kup na Steam',
-                'factsheet.title': '┌─ INFORMACJE ─┐',
+                'factsheet.title': '┌─ INFORMACJE O GRZE ─┐',
                 'factsheet.genre': 'Gatunek:',
-                'factsheet.genre_value': 'Przytulny Horror • Symulator Pulpitu • Puzzle/Narracja • Psychologiczny',
-                'factsheet.length': 'Długość:',
-                'factsheet.length_value': '~30 minut (za jednym razem)',
-                'factsheet.dev': 'Deweloper/Wydawca:',
+                'factsheet.genre_value': 'Cozy Horror • Symulator Pulpitu • Łamigłówka/Narracja • Thriller Psychologiczny',
+                'factsheet.length': 'Czas gry:',
+                'factsheet.length_value': '~30 minut (jedna sesja)',
+                'factsheet.dev': 'Twórca/Wydawca:',
                 'factsheet.platform': 'Platforma:',
                 'factsheet.languages': 'Języki:',
                 'factsheet.release': 'Premiera:',
                 'factsheet.tags': 'Tagi:',
-                'factsheet.tags_value': 'przytulny horror • emaile • klimat pulpitu • creepypasta',
-                'features.title': '┌─ CECHY ─┐',
-                'features.desktop': 'Pulpit jako scena: tapety się psuję, UI się trochę "łamie".',
-                'features.inbox': 'Opowiadanie przez skrzynkę: znajomi, ostrzeżenia i spam napędzają fabułę.',
-                'features.visual': 'Eskalacja wizualna (4 fazy): urocze komiksy piesków → fotorealistyczne → zniekształcone → przerażające obrazy.',
-                'features.timer': 'Presja czasu (Etap 3): porażka = "fail mail" w fabule.',
-                'features.finale': 'Zmiana finału (Etap 4): polowanie na sceny, żeby cię zmusić do patrzenia.',
+                'factsheet.tags_value': 'cozy horror • e-maile • klimaty pulpitu • creepypasta',
+                'features.title': '┌─ GŁÓWNE CECHY ─┐',
+                'features.desktop': 'Pulpit jako scena: tapety się psują, interfejs lekko się "rozlewa".',
+                'features.inbox': 'Historia przez skrzynkę: wiadomości od znajomych, ostrzeżenia i spam napędzają fabułę.',
+                'features.visual': 'Eskalacja wizualna (4 etapy): urocze rysunki psów → fotorealistyczne → zniekształcone → przerażające sceny.',
+                'features.timer': 'Presja czasu (Etap 3): niepowodzenie = "mail o porażce" w fabule.',
+                'features.finale': 'Zwrot w finale (Etap 4): tropienie szczegółów, które zmuszają do wpatrywania się.',
                 'features.jumpscare': 'Opcjonalny przełącznik "JUMPSCARE" w ustawieniach.',
-                'features.audio': 'Dźwięk zależny od etapu: radosny → przyciszony → oddechy/szum → prawie cisza.',
+                'features.audio': 'Dźwięk dostosowany do etapu: radosny → przytłumiony → oddechy/szumy → niemal cisza.',
                 'screens.title': '┌─ ZRZUTY EKRANU ─┐',
                 'screens.ascii_mode': 'TRYB ASCII:',
                 'screens.off': 'WYŁ',
                 'screens.on': 'WŁ',
-                'press.title': '┌─ CYTAT PRASOWY ─┐',
-                'press.quote': '📰 Twój cytat może być tutaj pierwszy!',
-                'press.contact_info': 'Skontaktuj się z nami pod adresem contact@sweetsenningames.com w sprawach prasowych',
+                'press.title': '┌─ RECENZJE PRASY ─┐',
+                'press.quote': '📰 Twoja recenzja może być tutaj pierwsza!',
+                'press.contact_info': 'Napisz do nas na contact@sweetsenningames.com w sprawach prasowych',
                 'about.title': '┌─ O GRZE ─┐',
-                'about.description': 'Smile Dog na nowo wyobraża klasyczną creepypastę przez przytulną fasadę, nowoczesne sztuczki pulpitu i wścibską skrzynkę. To kompaktowa, stylowa opowieść grozy, którą ukończysz za jednym razem—jeśli nie klikniesz "Odpowiedz wszystkim".',
+                'about.description': 'Smile Dog na nowo interpretuje klasyczną creepypastę poprzez przytulną otoczkę, nowoczesne sztuczki pulpitowe i wścibską skrzynkę pocztową. To zwięzła, stylowa opowieść grozy, którą przejdziesz za jednym podejściem—o ile nie naciśniesz "Odpowiedz wszystkim".',
                 'contact.title': '┌─ KONTAKT ─┐',
                 'contact.press': 'Kontakt prasowy:',
                 'contact.copy': '[Kopiuj]',
                 'contact.copied': '[Skopiowano!]',
                 'contact.steam': 'Strona Steam:',
-                'contact.presskit': 'Materiały prasowe:',
-                'contact.copyright': '© Sweet Sennin Games. "Smile Dog" to hołd dla klasycznego internet folklore.',
+                'contact.presskit': 'Zestaw prasowy:',
+                'contact.copyright': '© Sweet Sennin Games. "Smile Dog" to hołd złożony klasycznemu folkloru internetowemu.',
                 'footer.crt_mode': 'TRYB CRT:',
                 'footer.off': 'WYŁ',
                 'footer.on': 'WŁ'
