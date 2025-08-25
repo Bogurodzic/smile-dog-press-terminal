@@ -319,64 +319,65 @@
                 </pre>
             </div>
             <div class="subline">
-                BBS PRESS TERMINAL v1.0 • SMILE DOG • your inbox is watching <span class="blink">▎</span>
+                <span data-i18n="header.subtitle">BBS PRESS TERMINAL v1.0 • SMILE DOG • your inbox is watching</span> <span class="blink">▎</span>
             </div>
         </header>
 
         <nav class="nav-frame" role="navigation" aria-label="Main navigation">
-            <a href="#home">[H]ome</a>
-            <a href="#factsheet">[F]actsheet</a>
-            <a href="#features">[F]eatures</a>
-            <a href="#screens">[S]creens</a>
-            <a href="#press">[P]ress</a>
-            <a href="#contact">[C]ontact</a>
-            <a href="#download">[D]ownload</a>
+            <button class="btn" onclick="toggleLanguage()" id="lang-toggle" style="float: left; margin-right: 16px;">[PL/EN]</button>
+            <a href="#home" data-i18n="nav.home">[H]ome</a>
+            <a href="#factsheet" data-i18n="nav.factsheet">[F]actsheet</a>
+            <a href="#features" data-i18n="nav.features">[F]eatures</a>
+            <a href="#screens" data-i18n="nav.screens">[S]creens</a>
+            <a href="#press" data-i18n="nav.press">[P]ress</a>
+            <a href="#contact" data-i18n="nav.contact">[C]ontact</a>
+            <a href="#download" data-i18n="nav.download">[D]ownload</a>
         </nav>
 
         <main id="main">
             <section id="home" class="ascii-frame">
-                <h2>┌─ SMILE DOG — Desktop Thriller ─┐</h2>
+                <h2 data-i18n="home.title">┌─ SMILE DOG — Desktop Thriller ─┐</h2>
                 <h3 id="typewriter-text"></h3>
-                <p>A cute "spot-the-difference" doggy game lands on your desktop. The UI glitches. Emails pile up. The pictures stop being cute. Play in ~30 minutes; try not to hit "Reply All."</p>
+                <p data-i18n="home.description">A cute "spot-the-difference" doggy game lands on your desktop. The UI glitches. Emails pile up. The pictures stop being cute. Play in ~30 minutes; try not to hit "Reply All."</p>
                 <div>
-                    <a href="https://store.steampowered.com/app/3895360/Smile_Dog/" class="btn btn-primary" target="_blank" rel="noopener">Buy on Steam</a>
+                    <a href="https://store.steampowered.com/app/3895360/Smile_Dog/" class="btn btn-primary" target="_blank" rel="noopener" data-i18n="home.buy_steam">Buy on Steam</a>
                 </div>
             </section>
 
             <section id="factsheet" class="ascii-frame">
-                <h2>┌─ FACTSHEET ─┐</h2>
+                <h2 data-i18n="factsheet.title">┌─ FACTSHEET ─┐</h2>
                 <div class="two-col">
                     <div>
-                        <p><strong>Genre:</strong> Cozy Horror • Desktop Sim • Puzzle/Narrative • Psychological</p>
-                        <p><strong>Length:</strong> ~30 minutes (one sitting)</p>
-                        <p><strong>Dev/Publisher:</strong> Sweet Sennin Games</p>
-                        <p><strong>Platform:</strong> PC (Steam)</p>
+                        <p><strong data-i18n="factsheet.genre">Genre:</strong> <span data-i18n="factsheet.genre_value">Cozy Horror • Desktop Sim • Puzzle/Narrative • Psychological</span></p>
+                        <p><strong data-i18n="factsheet.length">Length:</strong> <span data-i18n="factsheet.length_value">~30 minutes (one sitting)</span></p>
+                        <p><strong data-i18n="factsheet.dev">Dev/Publisher:</strong> Sweet Sennin Games</p>
+                        <p><strong data-i18n="factsheet.platform">Platform:</strong> PC (Steam)</p>
                     </div>
                     <div>
-                        <p><strong>Languages:</strong> EN, PL (UI/subs)</p>
-                        <p><strong>Release:</strong> 21.08.2025 (released)</p>
-                        <p><strong>Tags:</strong> cozy horror • emails • desktop vibes • creepypasta</p>
+                        <p><strong data-i18n="factsheet.languages">Languages:</strong> EN, PL (UI/subs)</p>
+                        <p><strong data-i18n="factsheet.release">Release:</strong> 21.08.2025 (released)</p>
+                        <p><strong data-i18n="factsheet.tags">Tags:</strong> <span data-i18n="factsheet.tags_value">cozy horror • emails • desktop vibes • creepypasta</span></p>
                     </div>
                 </div>
             </section>
 
             <section id="features" class="ascii-frame">
-                <h2>┌─ FEATURES ─┐</h2>
+                <h2 data-i18n="features.title">┌─ FEATURES ─┐</h2>
                 <ul>
-                    <li>Desktop as stage: wallpapers glitch, UI "breaks" a little.</li>
-                    <li>Inbox storytelling: friend, warnings, and spam threads push the plot.</li>
-                    <li>Visual escalation (4 phases): cute comic pups → photo-real → warped → dread tableaux.</li>
-                    <li>Timer pressure (Stage 3): fail = in-story "fail mail".</li>
-                    <li>Finale switch (Stage 4): scene-hunt to make you stare.</li>
-                    <li>Optional "JUMPSCARE" toggle in Settings.</li>
-                    <li>Stage-based audio: cheerful → hushed → breaths/static → near-silence.</li>
+                    <li data-i18n="features.desktop">Desktop as stage: wallpapers glitch, UI "breaks" a little.</li>
+                    <li data-i18n="features.inbox">Inbox storytelling: friend, warnings, and spam threads push the plot.</li>
+                    <li data-i18n="features.visual">Visual escalation (4 phases): cute comic pups → photo-real → warped → dread tableaux.</li>
+                    <li data-i18n="features.timer">Timer pressure (Stage 3): fail = in-story "fail mail".</li>
+                    <li data-i18n="features.finale">Finale switch (Stage 4): scene-hunt to make you stare.</li>
+                    <li data-i18n="features.jumpscare">Optional "JUMPSCARE" toggle in Settings.</li>
+                    <li data-i18n="features.audio">Stage-based audio: cheerful → hushed → breaths/static → near-silence.</li>
                 </ul>
             </section>
 
             <section id="screens" class="ascii-frame">
-                <h2>┌─ SCREENSHOTS ─┐</h2>
+                <h2 data-i18n="screens.title">┌─ SCREENSHOTS ─┐</h2>
                 <p style="text-align: center; margin-bottom: 16px;">
-                    <button class="btn" onclick="toggleScreenshots()" id="screenshot-toggle">ASCII MODE: <span id="ascii-status">OFF</span></button>
+                    <button class="btn" onclick="toggleScreenshots()" id="screenshot-toggle"><span data-i18n="screens.ascii_mode">ASCII MODE:</span> <span id="ascii-status" data-i18n="screens.off">OFF</span></button>
                 </p>
                 
                 <!-- Real Screenshots -->
@@ -433,29 +434,29 @@
             </section>
 
             <section id="press" class="ascii-frame">
-                <h2>┌─ PRESS QUOTE ─┐</h2>
+                <h2 data-i18n="press.title">┌─ PRESS QUOTE ─┐</h2>
                 <div style="text-align: center; padding: 20px; border: 1px dashed var(--text-dim); background: rgba(0,0,0,0.3);">
-                    <p style="color: var(--text-dim); font-size: 14px; font-style: italic;">
+                    <p style="color: var(--text-dim); font-size: 14px; font-style: italic;" data-i18n="press.quote">
                         📰 Your quote can be here first!
                     </p>
-                    <p style="color: var(--text-dim); font-size: 12px; margin-top: 10px;">
+                    <p style="color: var(--text-dim); font-size: 12px; margin-top: 10px;" data-i18n="press.contact_info">
                         Contact us at <span style="color: var(--link-blue);">contact@sweetsenningames.com</span> for press inquiries
                     </p>
                 </div>
             </section>
 
             <section id="about" class="ascii-frame">
-                <h2>┌─ ABOUT ─┐</h2>
-                <p>Smile Dog reimagines a classic creepypasta through a cozy veneer, modern desktop tricks, and a nosy inbox. It's a compact, stylish horror tale you can finish in one sitting—if you don't hit "Reply All."</p>
+                <h2 data-i18n="about.title">┌─ ABOUT ─┐</h2>
+                <p data-i18n="about.description">Smile Dog reimagines a classic creepypasta through a cozy veneer, modern desktop tricks, and a nosy inbox. It's a compact, stylish horror tale you can finish in one sitting—if you don't hit "Reply All."</p>
             </section>
 
             <section id="contact" class="ascii-frame">
-                <h2>┌─ CONTACT ─┐</h2>
-                <p><strong>Press contact:</strong> contact@sweetsenningames.com <button class="btn" onclick="copyEmail()" id="copy-btn">[Copy]</button></p>
-                <p><strong>Steam page:</strong> <a href="https://store.steampowered.com/app/3895360/Smile_Dog/" target="_blank" rel="noopener">https://store.steampowered.com/app/3895360/Smile_Dog/</a></p>
+                <h2 data-i18n="contact.title">┌─ CONTACT ─┐</h2>
+                <p><strong data-i18n="contact.press">Press contact:</strong> contact@sweetsenningames.com <button class="btn" onclick="copyEmail()" id="copy-btn" data-i18n="contact.copy">[Copy]</button></p>
+                <p><strong data-i18n="contact.steam">Steam page:</strong> <a href="https://store.steampowered.com/app/3895360/Smile_Dog/" target="_blank" rel="noopener">https://store.steampowered.com/app/3895360/Smile_Dog/</a></p>
                 <p><strong>Twitter/X:</strong> <a href="https://twitter.com/SweetSenninGames" target="_blank" rel="noopener">@SweetSenninGames</a></p>
-                <p><strong>Press kit:</strong> <a href="https://drive.google.com/drive/u/1/folders/11xZHdSZScnhvdaBXI0Lm4G3iFyi2X55S" target="_blank" rel="noopener">Google Drive</a></p>
-                <p style="font-size: 11px; margin-top: 20px;">© Sweet Sennin Games. "Smile Dog" is an homage to classic internet folklore.</p>
+                <p><strong data-i18n="contact.presskit">Press kit:</strong> <a href="https://drive.google.com/drive/u/1/folders/11xZHdSZScnhvdaBXI0Lm4G3iFyi2X55S" target="_blank" rel="noopener">Google Drive</a></p>
+                <p style="font-size: 11px; margin-top: 20px;" data-i18n="contact.copyright">© Sweet Sennin Games. "Smile Dog" is an homage to classic internet folklore.</p>
             </section>
         </main>
 
@@ -475,7 +476,7 @@
             </p>
             
             <p style="text-align: center;">
-                <button class="btn" onclick="toggleCRT()" id="crt-toggle">CRT MODE: <span id="crt-status">OFF</span></button>
+                <button class="btn" onclick="toggleCRT()" id="crt-toggle"><span data-i18n="footer.crt_mode">CRT MODE:</span> <span id="crt-status" data-i18n="footer.off">OFF</span></button>
             </p>
             
             <p style="text-align: center; font-size: 11px; color: var(--text-dim); margin-top: 20px;">
@@ -519,10 +520,168 @@
             }
         }
 
+        // Language system
+        const translations = {
+            en: {
+                typewriter: 'Your inbox is watching.',
+                'header.subtitle': 'BBS PRESS TERMINAL v1.0 • SMILE DOG • your inbox is watching',
+                'nav.home': '[H]ome',
+                'nav.factsheet': '[F]actsheet',
+                'nav.features': '[F]eatures',
+                'nav.screens': '[S]creens',
+                'nav.press': '[P]ress',
+                'nav.contact': '[C]ontact',
+                'nav.download': '[D]ownload',
+                'home.title': '┌─ SMILE DOG — Desktop Thriller ─┐',
+                'home.description': 'A cute "spot-the-difference" doggy game lands on your desktop. The UI glitches. Emails pile up. The pictures stop being cute. Play in ~30 minutes; try not to hit "Reply All."',
+                'home.buy_steam': 'Buy on Steam',
+                'factsheet.title': '┌─ FACTSHEET ─┐',
+                'factsheet.genre': 'Genre:',
+                'factsheet.genre_value': 'Cozy Horror • Desktop Sim • Puzzle/Narrative • Psychological',
+                'factsheet.length': 'Length:',
+                'factsheet.length_value': '~30 minutes (one sitting)',
+                'factsheet.dev': 'Dev/Publisher:',
+                'factsheet.platform': 'Platform:',
+                'factsheet.languages': 'Languages:',
+                'factsheet.release': 'Release:',
+                'factsheet.tags': 'Tags:',
+                'factsheet.tags_value': 'cozy horror • emails • desktop vibes • creepypasta',
+                'features.title': '┌─ FEATURES ─┐',
+                'features.desktop': 'Desktop as stage: wallpapers glitch, UI "breaks" a little.',
+                'features.inbox': 'Inbox storytelling: friend, warnings, and spam threads push the plot.',
+                'features.visual': 'Visual escalation (4 phases): cute comic pups → photo-real → warped → dread tableaux.',
+                'features.timer': 'Timer pressure (Stage 3): fail = in-story "fail mail".',
+                'features.finale': 'Finale switch (Stage 4): scene-hunt to make you stare.',
+                'features.jumpscare': 'Optional "JUMPSCARE" toggle in Settings.',
+                'features.audio': 'Stage-based audio: cheerful → hushed → breaths/static → near-silence.',
+                'screens.title': '┌─ SCREENSHOTS ─┐',
+                'screens.ascii_mode': 'ASCII MODE:',
+                'screens.off': 'OFF',
+                'screens.on': 'ON',
+                'press.title': '┌─ PRESS QUOTE ─┐',
+                'press.quote': '📰 Your quote can be here first!',
+                'press.contact_info': 'Contact us at contact@sweetsenningames.com for press inquiries',
+                'about.title': '┌─ ABOUT ─┐',
+                'about.description': 'Smile Dog reimagines a classic creepypasta through a cozy veneer, modern desktop tricks, and a nosy inbox. It\'s a compact, stylish horror tale you can finish in one sitting—if you don\'t hit "Reply All."',
+                'contact.title': '┌─ CONTACT ─┐',
+                'contact.press': 'Press contact:',
+                'contact.copy': '[Copy]',
+                'contact.copied': '[Copied!]',
+                'contact.steam': 'Steam page:',
+                'contact.presskit': 'Press kit:',
+                'contact.copyright': '© Sweet Sennin Games. "Smile Dog" is an homage to classic internet folklore.',
+                'footer.crt_mode': 'CRT MODE:',
+                'footer.off': 'OFF',
+                'footer.on': 'ON'
+            },
+            pl: {
+                typewriter: 'Twoja skrzynka cię obserwuje.',
+                'header.subtitle': 'TERMINAL PRASOWY BBS v1.0 • SMILE DOG • twoja skrzynka cię obserwuje',
+                'nav.home': '[G]łówna',
+                'nav.factsheet': '[I]nfo',
+                'nav.features': '[F]eatures',
+                'nav.screens': '[S]kriny',
+                'nav.press': '[P]rasa',
+                'nav.contact': '[K]ontakt',
+                'nav.download': '[P]obierz',
+                'home.title': '┌─ SMILE DOG — Thriller Desktopowy ─┐',
+                'home.description': 'Urocza gra "znajdź różnice" z pieskami ląduje na twoim pulpicie. UI się psuje. Emaile się piętrzą. Obrazki przestają być urocze. Graj ~30 minut; staraj się nie kliknąć "Odpowiedz wszystkim".',
+                'home.buy_steam': 'Kup na Steam',
+                'factsheet.title': '┌─ INFORMACJE ─┐',
+                'factsheet.genre': 'Gatunek:',
+                'factsheet.genre_value': 'Przytulny Horror • Symulator Pulpitu • Puzzle/Narracja • Psychologiczny',
+                'factsheet.length': 'Długość:',
+                'factsheet.length_value': '~30 minut (za jednym razem)',
+                'factsheet.dev': 'Deweloper/Wydawca:',
+                'factsheet.platform': 'Platforma:',
+                'factsheet.languages': 'Języki:',
+                'factsheet.release': 'Premiera:',
+                'factsheet.tags': 'Tagi:',
+                'factsheet.tags_value': 'przytulny horror • emaile • klimat pulpitu • creepypasta',
+                'features.title': '┌─ CECHY ─┐',
+                'features.desktop': 'Pulpit jako scena: tapety się psuję, UI się trochę "łamie".',
+                'features.inbox': 'Opowiadanie przez skrzynkę: znajomi, ostrzeżenia i spam napędzają fabułę.',
+                'features.visual': 'Eskalacja wizualna (4 fazy): urocze komiksy piesków → fotorealistyczne → zniekształcone → przerażające obrazy.',
+                'features.timer': 'Presja czasu (Etap 3): porażka = "fail mail" w fabule.',
+                'features.finale': 'Zmiana finału (Etap 4): polowanie na sceny, żeby cię zmusić do patrzenia.',
+                'features.jumpscare': 'Opcjonalny przełącznik "JUMPSCARE" w ustawieniach.',
+                'features.audio': 'Dźwięk zależny od etapu: radosny → przyciszony → oddechy/szum → prawie cisza.',
+                'screens.title': '┌─ ZRZUTY EKRANU ─┐',
+                'screens.ascii_mode': 'TRYB ASCII:',
+                'screens.off': 'WYŁ',
+                'screens.on': 'WŁ',
+                'press.title': '┌─ CYTAT PRASOWY ─┐',
+                'press.quote': '📰 Twój cytat może być tutaj pierwszy!',
+                'press.contact_info': 'Skontaktuj się z nami pod adresem contact@sweetsenningames.com w sprawach prasowych',
+                'about.title': '┌─ O GRZE ─┐',
+                'about.description': 'Smile Dog na nowo wyobraża klasyczną creepypastę przez przytulną fasadę, nowoczesne sztuczki pulpitu i wścibską skrzynkę. To kompaktowa, stylowa opowieść grozy, którą ukończysz za jednym razem—jeśli nie klikniesz "Odpowiedz wszystkim".',
+                'contact.title': '┌─ KONTAKT ─┐',
+                'contact.press': 'Kontakt prasowy:',
+                'contact.copy': '[Kopiuj]',
+                'contact.copied': '[Skopiowano!]',
+                'contact.steam': 'Strona Steam:',
+                'contact.presskit': 'Materiały prasowe:',
+                'contact.copyright': '© Sweet Sennin Games. "Smile Dog" to hołd dla klasycznego internet folklore.',
+                'footer.crt_mode': 'TRYB CRT:',
+                'footer.off': 'WYŁ',
+                'footer.on': 'WŁ'
+            }
+        };
+
+        let currentLang = localStorage.getItem('smileDogLang') || 'pl';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'pl' : 'en';
+            localStorage.setItem('smileDogLang', currentLang);
+            updateLanguage();
+        }
+
+        function updateLanguage() {
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[currentLang] && translations[currentLang][key]) {
+                    element.textContent = translations[currentLang][key];
+                }
+            });
+            
+            // Update typewriter text
+            const typewriterElement = document.getElementById('typewriter-text');
+            if (typewriterElement) {
+                typeWriter(translations[currentLang].typewriter, typewriterElement, 80);
+            }
+            
+            // Update dynamic texts that might have been changed by JS
+            updateDynamicTexts();
+        }
+
+        function updateDynamicTexts() {
+            // Update CRT status
+            const crtStatus = document.getElementById('crt-status');
+            if (crtStatus) {
+                const isOn = document.body.classList.contains('crt-mode');
+                crtStatus.textContent = translations[currentLang][isOn ? 'footer.on' : 'footer.off'];
+            }
+            
+            // Update ASCII status
+            const asciiStatus = document.getElementById('ascii-status');
+            if (asciiStatus) {
+                const realScreenshots = document.getElementById('real-screenshots');
+                const isAsciiOn = realScreenshots && realScreenshots.style.display === 'none';
+                asciiStatus.textContent = translations[currentLang][isAsciiOn ? 'screens.on' : 'screens.off'];
+            }
+            
+            // Update copy button
+            const copyBtn = document.getElementById('copy-btn');
+            if (copyBtn && copyBtn.textContent.includes('Copy')) {
+                copyBtn.textContent = translations[currentLang]['contact.copy'];
+            }
+        }
+
         // Initialize typewriter on load
         document.addEventListener('DOMContentLoaded', function() {
-            const typewriterElement = document.getElementById('typewriter-text');
-            typeWriter('Your inbox is watching.', typewriterElement, 80);
+            // Initialize language first
+            updateLanguage();
             
             // Initialize hit counter
             updateHitCounter();
@@ -547,10 +706,10 @@
             if (navigator.clipboard) {
                 navigator.clipboard.writeText(email).then(function() {
                     const btn = document.getElementById('copy-btn');
-                    btn.textContent = '[Copied!]';
+                    btn.textContent = translations[currentLang]['contact.copied'];
                     btn.style.color = 'var(--text-green)';
                     setTimeout(function() {
-                        btn.textContent = '[Copy]';
+                        btn.textContent = translations[currentLang]['contact.copy'];
                         btn.style.color = '';
                     }, 2000);
                 });
@@ -564,9 +723,9 @@
                 document.body.removeChild(textArea);
                 
                 const btn = document.getElementById('copy-btn');
-                btn.textContent = '[Copied!]';
+                btn.textContent = translations[currentLang]['contact.copied'];
                 setTimeout(function() {
-                    btn.textContent = '[Copy]';
+                    btn.textContent = translations[currentLang]['contact.copy'];
                 }, 2000);
             }
         }
@@ -584,9 +743,9 @@
             body.classList.toggle('crt-mode');
             
             if (body.classList.contains('crt-mode')) {
-                status.textContent = 'ON';
+                status.textContent = translations[currentLang]['footer.on'];
             } else {
-                status.textContent = 'OFF';
+                status.textContent = translations[currentLang]['footer.off'];
             }
         }
 
@@ -614,12 +773,12 @@
                 // Show real screenshots, hide ASCII
                 realScreenshots.style.display = 'block';
                 asciiScreenshots.style.display = 'none';
-                status.textContent = 'OFF';
+                status.textContent = translations[currentLang]['screens.off'];
             } else {
                 // Show ASCII screenshots, hide real
                 realScreenshots.style.display = 'none';
                 asciiScreenshots.style.display = 'block';
-                status.textContent = 'ON';
+                status.textContent = translations[currentLang]['screens.on'];
             }
         }
 
