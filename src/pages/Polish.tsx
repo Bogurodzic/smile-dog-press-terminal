@@ -6,7 +6,9 @@ const Polish = () => {
   const { t, i18n } = useTranslation();
 
   useEffect(() => {
-    i18n.changeLanguage('pl');
+    if (i18n.language !== 'pl') {
+      i18n.changeLanguage('pl');
+    }
   }, [i18n]);
 
   return (
