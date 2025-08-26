@@ -632,7 +632,22 @@
             }
         };
 
-        let currentLang = localStorage.getItem('smileDogLang') || 'pl';
+        // Auto-detect language based on browser preference
+        function detectLanguage() {
+            const savedLang = localStorage.getItem('smileDogLang');
+            if (savedLang) {
+                return savedLang; // Use saved preference if available
+            }
+            
+            // Detect browser language
+            const browserLang = navigator.language || navigator.userLanguage || 'en';
+            const langCode = browserLang.toLowerCase().substring(0, 2);
+            
+            // Set Polish for Polish users, English for everyone else
+            return langCode === 'pl' ? 'pl' : 'en';
+        }
+
+        let currentLang = detectLanguage();
 
         function toggleLanguage() {
             currentLang = currentLang === 'en' ? 'pl' : 'en';
@@ -655,8 +670,18 @@
                 typeWriter(translations[currentLang].typewriter, typewriterElement, 80);
             }
             
+            // Update language toggle button text
+            updateLanguageButton();
+            
             // Update dynamic texts that might have been changed by JS
             updateDynamicTexts();
+        }
+
+        function updateLanguageButton() {
+            const langToggle = document.getElementById('lang-toggle');
+            if (langToggle) {
+                langToggle.textContent = currentLang === 'pl' ? '[PL]' : '[EN]';
+            }
         }
 
         function updateDynamicTexts() {
