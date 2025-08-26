@@ -579,23 +579,23 @@
         <div class="matrix-rain" id="matrix-rain"></div>
         <div class="loading-content">
             <div class="terminal-header">
-                <span class="blink">█</span> SMILE DOG BBS v1.01
+                <span class="blink">█</span> <span data-i18n="loading.title">SMILE DOG BBS v1.01</span>
             </div>
             <div class="loading-progress">
                 <div class="progress-bar">
                     <div class="progress-fill"></div>
                 </div>
-                <div class="loading-text">INITIALIZING...</div>
+                <div class="loading-text" data-i18n="loading.init">INITIALIZING...</div>
             </div>
             <div class="loading-steps">
-                <div class="step" data-step="1">[✓] Loading terminal...</div>
-                <div class="step" data-step="2">[✓] Connecting to BBS...</div>
-                <div class="step" data-step="3">[✓] Authenticating user...</div>
-                <div class="step" data-step="4">[✓] Loading inbox...</div>
-                <div class="step" data-step="5">[✓] Ready to connect</div>
+                <div class="step" data-step="1" data-i18n="loading.step1">[✓] Loading terminal...</div>
+                <div class="step" data-step="2" data-i18n="loading.step2">[✓] Connecting to BBS...</div>
+                <div class="step" data-step="3" data-i18n="loading.step3">[✓] Authenticating user...</div>
+                <div class="step" data-step="4" data-i18n="loading.step4">[✓] Loading inbox...</div>
+                <div class="step" data-step="5" data-i18n="loading.step5">[✓] Ready to connect</div>
             </div>
             <div class="loading-footer">
-                <span class="blink">PRESS ANY KEY TO CONTINUE</span>
+                <span class="blink" data-i18n="loading.press_key">PRESS ANY KEY TO CONTINUE</span>
             </div>
         </div>
     </div>
@@ -871,7 +871,16 @@
                 'contact.copyright': '© Sweet Sennin Games. "Smile Dog" is an homage to classic internet folklore.',
                 'footer.crt_mode': 'CRT MODE:',
                 'footer.off': 'OFF',
-                'footer.on': 'ON'
+                'footer.on': 'ON',
+                'loading.title': 'SMILE DOG BBS v1.01',
+                'loading.init': 'INITIALIZING...',
+                'loading.ready': 'READY TO CONNECT',
+                'loading.press_key': 'PRESS ANY KEY TO CONTINUE',
+                'loading.step1': '[✓] Loading terminal...',
+                'loading.step2': '[✓] Connecting to BBS...',
+                'loading.step3': '[✓] Authenticating user...',
+                'loading.step4': '[✓] Loading inbox...',
+                'loading.step5': '[✓] Ready to connect'
             },
             pl: {
                 typewriter: 'Twoja skrzynka odbiorowa cię obserwuje.',
@@ -923,7 +932,16 @@
                 'contact.copyright': '© Sweet Sennin Games. "Smile Dog" to hołd złożony klasycznemu folkloru internetowemu.',
                 'footer.crt_mode': 'TRYB CRT:',
                 'footer.off': 'WYŁ',
-                'footer.on': 'WŁ'
+                'footer.on': 'WŁ',
+                'loading.title': 'SMILE DOG BBS v1.01',
+                'loading.init': 'INICJALIZOWANIE...',
+                'loading.ready': 'GOTOWE DO POŁĄCZENIA',
+                'loading.press_key': 'NACIŚNIJ DOWOLNY KLAWISZ',
+                'loading.step1': '[✓] Ładowanie terminala...',
+                'loading.step2': '[✓] Łączenie z BBS...',
+                'loading.step3': '[✓] Uwierzytelnianie użytkownika...',
+                'loading.step4': '[✓] Ładowanie skrzynki...',
+                'loading.step5': '[✓] Gotowe do połączenia'
             }
         };
 
@@ -1020,7 +1038,7 @@
                                     if (progress >= 100) {
                         clearInterval(progressInterval);
                         setTimeout(() => {
-                            loadingText.textContent = 'READY TO CONNECT';
+                            loadingText.textContent = translations[currentLang]['loading.ready'];
                             loadingText.style.color = 'var(--text-green)';
                             showPressAnyKey();
                         }, 500);
