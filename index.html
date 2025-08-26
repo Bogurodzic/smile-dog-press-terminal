@@ -79,6 +79,275 @@
             }
         }
 
+        /* Loading Screen */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-black);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--mono-font);
+        }
+
+        .loading-content {
+            text-align: center;
+            color: var(--text-green);
+            max-width: 600px;
+            padding: 40px;
+        }
+
+        .terminal-header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            text-shadow: 0 0 10px var(--text-green);
+            border-bottom: 2px solid var(--text-green);
+            padding-bottom: 20px;
+        }
+
+        .loading-progress {
+            margin: 40px 0;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            border: 2px solid var(--text-green);
+            background: transparent;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--text-green);
+            width: 0%;
+            transition: width 0.5s ease;
+            box-shadow: 0 0 20px var(--text-green);
+        }
+
+        .loading-text {
+            font-size: 18px;
+            margin-bottom: 20px;
+            text-shadow: 0 0 5px var(--text-green);
+        }
+
+        .loading-steps {
+            text-align: left;
+            margin: 30px 0;
+            font-size: 14px;
+        }
+
+        .step {
+            margin: 10px 0;
+            opacity: 0.3;
+            transition: all 0.5s ease;
+            transform: translateX(-20px);
+        }
+
+        .step.active {
+            opacity: 1;
+            transform: translateX(0);
+            color: var(--text-green);
+            text-shadow: 0 0 5px var(--text-green);
+        }
+
+        .step.completed {
+            opacity: 0.7;
+            color: var(--text-dim);
+        }
+
+        .loading-footer {
+            margin-top: 40px;
+            font-size: 16px;
+            color: var(--warning-red);
+            text-shadow: 0 0 5px var(--warning-red);
+            border-top: 1px solid var(--warning-red);
+            padding-top: 20px;
+        }
+
+        /* Enhanced animations for juiciness */
+        .ascii-frame {
+            transition: all 0.3s ease;
+            transform: translateY(0);
+        }
+
+        .ascii-frame:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 20px rgba(0, 230, 118, 0.3);
+            border-color: var(--text-green);
+        }
+
+        .btn {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 15px rgba(0, 230, 118, 0.4);
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 230, 118, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        /* Glitch effect for headers */
+        h2 {
+            position: relative;
+        }
+
+        h2::before {
+            content: attr(data-i18n);
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: var(--warning-red);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        h2:hover::before {
+            opacity: 0.3;
+        }
+
+        /* Enhanced navigation */
+        .nav-frame a {
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-frame a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--text-green);
+            transition: width 0.3s ease;
+        }
+
+        .nav-frame a:hover::after {
+            width: 100%;
+        }
+
+        /* Typewriter enhancement */
+        #typewriter-text {
+            border-right: 2px solid var(--text-green);
+            animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: var(--text-green); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Matrix rain effect for loading screen */
+        .matrix-rain {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .matrix-char {
+            position: absolute;
+            color: var(--text-green);
+            font-size: 14px;
+            opacity: 0.7;
+            animation: matrix-fall 3s linear infinite;
+        }
+
+        @keyframes matrix-fall {
+            0% {
+                transform: translateY(-100vh);
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+
+        /* Enhanced button effects */
+        .btn-primary {
+            background: linear-gradient(45deg, var(--text-green), #00b8d4);
+            border: none;
+            color: var(--bg-black);
+            font-weight: bold;
+            text-shadow: none;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(45deg, #00b8d4, var(--text-green));
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 230, 118, 0.6);
+        }
+
+        /* Glitch effect for ASCII art */
+        .ascii-frame:hover pre {
+            animation: glitch 0.3s ease-in-out;
+        }
+
+        @keyframes glitch {
+            0%, 100% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+        }
+
+        /* Enhanced navigation hover */
+        .nav-frame a:hover {
+            transform: scale(1.1);
+            text-shadow: 0 0 10px var(--text-green);
+        }
+
+        /* Smooth scroll enhancement */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Enhanced focus states */
+        .btn:focus,
+        a:focus {
+            outline: 2px solid var(--text-green);
+            outline-offset: 2px;
+            transform: scale(1.05);
+        }
+
         /* ASCII Frames */
         .ascii-frame {
             border: 1px solid var(--text-green);
@@ -305,6 +574,32 @@
     </style>
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="matrix-rain" id="matrix-rain"></div>
+        <div class="loading-content">
+            <div class="terminal-header">
+                <span class="blink">█</span> SMILE DOG BBS v1.01
+            </div>
+            <div class="loading-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="loading-text">INITIALIZING...</div>
+            </div>
+            <div class="loading-steps">
+                <div class="step" data-step="1">[✓] Loading terminal...</div>
+                <div class="step" data-step="2">[✓] Connecting to BBS...</div>
+                <div class="step" data-step="3">[✓] Authenticating user...</div>
+                <div class="step" data-step="4">[✓] Loading inbox...</div>
+                <div class="step" data-step="5">[✓] Ready to connect</div>
+            </div>
+            <div class="loading-footer">
+                <span class="blink">PRESS ANY KEY TO CONTINUE</span>
+            </div>
+        </div>
+    </div>
+
     <a href="#main" class="skip-link">Skip to main content</a>
     
     <div class="container">
@@ -707,8 +1002,122 @@
             }
         }
 
+        // Loading Screen Functions
+        function startLoadingSequence() {
+            const loadingScreen = document.getElementById('loading-screen');
+            const progressFill = document.querySelector('.progress-fill');
+            const steps = document.querySelectorAll('.step');
+            const loadingText = document.querySelector('.loading-text');
+            
+            let currentStep = 0;
+            let progress = 0;
+            
+            // Progress bar animation
+            const progressInterval = setInterval(() => {
+                progress += 2;
+                progressFill.style.width = progress + '%';
+                
+                                    if (progress >= 100) {
+                        clearInterval(progressInterval);
+                        setTimeout(() => {
+                            loadingText.textContent = 'READY TO CONNECT';
+                            loadingText.style.color = 'var(--text-green)';
+                            showPressAnyKey();
+                        }, 500);
+                    }
+            }, 50);
+            
+            // Step animations
+            const stepInterval = setInterval(() => {
+                if (currentStep < steps.length) {
+                    steps[currentStep].classList.add('active');
+                    setTimeout(() => {
+                        steps[currentStep].classList.remove('active');
+                        steps[currentStep].classList.add('completed');
+                    }, 1000);
+                    currentStep++;
+                } else {
+                    clearInterval(stepInterval);
+                }
+            }, 800);
+        }
+        
+        function showPressAnyKey() {
+            const footer = document.querySelector('.loading-footer');
+            footer.style.opacity = '1';
+            footer.style.animation = 'pulse 1s infinite';
+            
+            // Listen for any key press
+            document.addEventListener('keydown', hideLoadingScreen, { once: true });
+            document.addEventListener('click', hideLoadingScreen, { once: true });
+        }
+        
+        function hideLoadingScreen() {
+            const loadingScreen = document.getElementById('loading-screen');
+            loadingScreen.style.opacity = '0';
+            loadingScreen.style.transform = 'scale(0.95)';
+            
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+                // Start the main site animations
+                startMainSiteAnimations();
+            }, 500);
+        }
+        
+        function startMainSiteAnimations() {
+            // Animate sections on scroll
+            const sections = document.querySelectorAll('.ascii-frame');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            sections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'all 0.6s ease';
+                observer.observe(section);
+            });
+        }
+
+        function createMatrixRain() {
+            const matrixRain = document.getElementById('matrix-rain');
+            const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+            
+            function createChar() {
+                const char = document.createElement('div');
+                char.className = 'matrix-char';
+                char.textContent = chars[Math.floor(Math.random() * chars.length)];
+                char.style.left = Math.random() * 100 + '%';
+                char.style.animationDelay = Math.random() * 3 + 's';
+                char.style.animationDuration = (Math.random() * 2 + 2) + 's';
+                
+                matrixRain.appendChild(char);
+                
+                // Remove character after animation
+                setTimeout(() => {
+                    if (char.parentNode) {
+                        char.parentNode.removeChild(char);
+                    }
+                }, 5000);
+            }
+            
+            // Create characters at intervals
+            setInterval(createChar, 100);
+        }
+
         // Initialize typewriter on load
         document.addEventListener('DOMContentLoaded', function() {
+            // Start matrix rain effect
+            createMatrixRain();
+            
+            // Start loading sequence
+            startLoadingSequence();
+            
             // Initialize language first
             updateLanguage();
             
